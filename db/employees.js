@@ -46,6 +46,11 @@ export function getEmployeeByID(id) {
   return employees.find((employee) => employee.id === id);
 }
 
+/**
+ *
+ * @param {string} name - Name of new employee
+ * @returns {employee} returns newly created employee
+ */
 export function addEmployee(name) {
   // employee ID must be unique
   const employee = { id: employees.length + 1, name };

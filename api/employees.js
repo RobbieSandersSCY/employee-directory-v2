@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
 
 router.post("/", (req, res) => {
   // send 400 if no body
-  if (!body) return res.status(400).send("Request must have a body");
+  if (!req.body) return res.status(400).send("Request must have a body");
 
   const { name } = req.body;
   // send 400 if issue with name
